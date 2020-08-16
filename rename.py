@@ -9,21 +9,12 @@ def renameFiles(gName):
 		os.mkdir(gName)
 	for file in os.listdir():
 		f_name, f_ext = os.path.splitext(file)
+		if os.path.exists(gName+"\\"+file):
+			os.remove(file)
+			continue
 		if(f_ext != ''):
-			shutil.move(file, gName)
-			# while True:
-			# 	try:
-			# 		shutil.move(file, gName)
-			# 		break
-			# 	except Exception as e:
-			# 		sleep(0.5)
-			# 		continue
-
-
-
-def showFiles():
-	os.chdir("Downloads")
-	for file in os.listdir():
-		f_name, f_ext = os.path.splitext(file)
-		print(f_name, f_ext)
+			try:
+				shutil.move(file, gName)
+			except Exception as e:
+				raise e
 
