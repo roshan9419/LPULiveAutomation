@@ -11,7 +11,12 @@ try:
 	from selenium.webdriver.chrome.options import Options
 	print('Pass: Requirement Satisfied')
 except Exception as e:
-	print("Fail: Something Occurred")
+	print('Requirement Not Satisfied !')
+	choice = input("Do you want to Download Selenium (Y/N): ")
+	if(choice.lower()=="y"):
+		os.system("pip install selenium")
+	else:
+		print("Download necessary files, using command ( pip install selenium )")
 	sleep(5)
 	quit()
 
@@ -34,8 +39,9 @@ try:
 	driver.get('https://lpulive.lpu.in/login')
 	print('Pass: Browser Opened')
 except Exception as e:
-	print("Fail: Chrome Driver Error")
-	sleep(5)
+	print('Download ChromeDriver, of same version as of Chrome and place the chromedriver.exe file in Same directory')
+	print('https://chromedriver.chromium.org/downloads')
+	sleep(10)
 	quit()
 
 def login():
