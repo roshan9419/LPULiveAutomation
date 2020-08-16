@@ -1,15 +1,3 @@
-'''
-1. Go the https://lpulive.lpu.in/login [Done]
-2. Login with UMS ID and Password [Done]
-3. click on the 1st group [Done]
-4. Find the span element with the word Today [Done]
-5. Download files and images if any [Done]
-6. Create a folder name with same name as group name 
-7. And Paste those files in respective folders
-8. Switch to the next Group [Done]
-9. Perform same task
-10. Happy Coding !
-'''
 from time import sleep
 import os
 import rename
