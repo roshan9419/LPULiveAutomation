@@ -1,6 +1,6 @@
 from time import sleep
 import os
-import rename
+import folderAction
 
 try:
 	from selenium import webdriver
@@ -96,7 +96,7 @@ def downloadMaterials(path):
 		except Exception as e:
 			print("Download Completed")
 			sleep(2)
-			rename.renameFiles(gName)
+			folderAction.moveToFolders(gName)
 			return
 
 
