@@ -1,7 +1,7 @@
 import os
 import shutil
 
-def renameFiles(gName):
+def moveToFolders(gName):
 	# os.chdir("Downloads")
 	if ":" in gName:
 		gName = "Friends"
