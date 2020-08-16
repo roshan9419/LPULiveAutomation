@@ -1,3 +1,15 @@
+'''
+1. Go the https://lpulive.lpu.in/login [Done]
+2. Login with UMS ID and Password [Done]
+3. click on the 1st group [Done]
+4. Find the span element with the word Today [Done]
+5. Download files and images if any [Done]
+6. Create a folder name with same name as group name 
+7. And Paste those files in respective folders
+8. Switch to the next Group [Done]
+9. Perform same task
+10. Happy Coding !
+'''
 from time import sleep
 import os
 import rename
@@ -41,9 +53,9 @@ except Exception as e:
 def login():
 	try:
 		user_field = driver.find_element_by_xpath('//*[@id="inputEmail"]')
-		user_field.send_keys('11903306')
+		user_field.send_keys('RegID')
 		pass_field = driver.find_element_by_xpath('//*[@id="inputPassword"]')
-		pass_field.send_keys('9419Roshank@')
+		pass_field.send_keys('PassWord')
 		pass_field.send_keys(Keys.RETURN)
 		print('Pass: Login Successfull')
 	except Exception as e:
@@ -57,7 +69,7 @@ def downloadMaterials(path):
 	dwnBtnPath = '/html/body/app-root/app-layout/div/div/div/div[2]/app-chat/app-gallery-carousel/div/div[1]/div[2]/a'
 	closeBtnPath = '/html/body/app-root/app-layout/div/div/div/div[2]/app-chat/app-gallery-carousel/div/div[1]/div[2]/span'
 	
-	print(gName)
+	# print(gName)
 	for i in range(2, 100):
 		textpath = path + '/div['+str(i)+']'
 		try:
